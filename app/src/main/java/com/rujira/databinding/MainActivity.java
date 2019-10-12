@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         UserModel user = new UserModel();
-        user.setFirstName("Jedsada");
-        user.setLastName("Tiwongvorakul");
-        user.setAge(22);
+        user.setFirstName("Sim");
+        user.setLastName("Card");
+        user.setAge(27);
 
         binding.setData(user);
     }

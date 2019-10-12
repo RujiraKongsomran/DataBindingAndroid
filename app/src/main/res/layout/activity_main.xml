@@ -8,16 +8,31 @@
             type="com.rujira.databinding.model.UserModel" />
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/tv_firstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.firstName}"/>
-    </RelativeLayout>
+            android:text="@{data.firstName}" />
+
+        <TextView
+            android:id="@+id/tv_lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.lastName}" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(data.age)}" />
+
+    </LinearLayout>
 
 </layout>
