@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 
 import com.rujira.databinding.databinding.ActivityMainBinding;
+import com.rujira.databinding.model.UserModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,10 +15,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
-
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        binding.tvTitle.setText("What's up");
+        UserModel user = new UserModel();
+        user.setFirstName("Jedsada");
+        user.setLastName("Tiwongvorakul");
+        user.setAge(22);
+
+        binding.setData(user);
     }
 }
