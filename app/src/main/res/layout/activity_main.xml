@@ -6,6 +6,10 @@
         <variable
             name="data"
             type="com.rujira.databinding.model.UserModel" />
+
+        <variable
+            name="parcel"
+            type="com.rujira.databinding.model.ParcelModel" />
     </data>
 
     <LinearLayout
@@ -33,6 +37,30 @@
             android:layout_height="wrap_content"
             android:text="@{String.valueOf(data.age)}" />
 
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FF0000FF" />
+
+        <TextView
+            android:id="@+id/tv_parcel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{parcel.parcelName}" />
+
+        <TextView
+            android:id="@+id/tv_parcel_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(parcel.parcelType)}" />
+
+        <TextView
+            android:id="@+id/tv_parcel_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(parcel.parcelPrice)}" />
     </LinearLayout>
 
 </layout>

@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 
 import com.rujira.databinding.databinding.ActivityMainBinding;
+import com.rujira.databinding.model.ParcelModel;
 import com.rujira.databinding.model.UserModel;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +23,12 @@ public class MainActivity extends AppCompatActivity {
         user.setLastName("Card");
         user.setAge(27);
 
+        ParcelModel parcelModel = new ParcelModel();
+        parcelModel.setParcelName("T-Shirt");
+        parcelModel.setParcelType(23);
+        parcelModel.setParcelPrice(590);
+
         binding.setData(user);
+        binding.setParcel(parcelModel);
     }
 }
